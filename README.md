@@ -23,14 +23,14 @@ Contact the email address [roberto.agromayor@ntnu.no](mailto:roberto.agromayor@n
 
 
 ## References
-[1] R. Agromayor, and L. O. Nord, Preliminary Design and Optimization of Axial Turbines Accounting for Diffuser Performance, International Journal of Turbomachinery, Propulsion and Power (submitted).
+[1] R. Agromayor and L. O. Nord, Preliminary Design and Optimization of Axial Turbines Accounting for Diffuser Performance, International Journal of Turbomachinery, Propulsion and Power (submitted).
 
 [![DOI](https://img.shields.io/badge/DOI-Diffuser_paper_DOI-blue.svg)](https://www.google.com) (not ready yet)
 
 
 [2] R. Agromayor, and L. O. Nord, AxialOpt, Zenodo repository, 2018
 
-[![DOI](https://zenodo.org/badge/147427825.svg)](https://zenodo.org/badge/latestdoi/147427825)
+[![DOI](https://zenodo.org/badge/178391900.svg)](https://zenodo.org/badge/latestdoi/178391900)
 
 
 [3] The MathWorks Inc., MATLAB version R2018a, 2018.
