@@ -28,7 +28,7 @@ Contact the email address [roberto.agromayor@ntnu.no](mailto:roberto.agromayor@n
 [![DOI](https://img.shields.io/badge/DOI-Diffuser_paper_DOI-blue.svg)](https://www.google.com) (not ready yet)
 
 
-[2] R. Agromayor, and L. O. Nord, AxialOpt, Zenodo repository, 2018
+[2] R. Agromayor, and L. O. Nord, AxialOpt - A Mean-Line Model for the Design and Optimization of Axial Turbines, Zenodo repository, 2019
 
 [![DOI](https://zenodo.org/badge/178391900.svg)](https://zenodo.org/badge/latestdoi/178391900)
 
