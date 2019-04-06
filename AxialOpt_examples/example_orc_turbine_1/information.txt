@@ -1,0 +1,16 @@
+AxialOpt examples – Organic Rankine Cylce (ORC) turbine
+
+This example uses the thermodynamic boundary conditions for a 1-stage turbine using R125 as working fluid
+
+The data was obtained from:
+Macchi and Astolfi (2017). Organic Rankine Cycles Power Systems 1st Edition. Page 314
+
+Thermodynamic data:
+Working fluid	                    R125
+Inlet stagnation temperature	155 C
+Inlet stagnation pressure	3618.0 kPa
+Outlet static pressure	1568.5 kPa
+Isentropic power output	250 kW
+
+Observations:
+This case corresponds to a transcritical Rankine cycle with a condenser temperature of 30 C

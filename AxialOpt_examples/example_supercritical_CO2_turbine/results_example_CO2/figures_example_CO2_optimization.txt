@@ -1,0 +1,48 @@
+Independent variables
+variable	lower_bound	value	upper_bound	satisfied	active
+w_s	1.000000e-01	7.929796e-01	1.000000e+01	yes	no
+d_s	1.000000e-01	2.489529e+00	1.000000e+01	yes	no
+vel_in	1.000000e-03	9.647842e-02	5.000000e-01	yes	no
+vel_out	5.000000e-02	6.767585e-01	1.250000e+00	yes	no
+vel_out	5.000000e-02	7.097891e-01	1.250000e+00	yes	no
+ang_out	6.981317e-01	1.396263e+00	1.396263e+00	yes	yes
+ang_out	-1.396263e+00	-1.348189e+00	-6.981317e-01	yes	no
+r_Hc	1.000000e+00	1.932576e+00	2.000000e+00	yes	no
+r_Hc	1.000000e+00	1.960649e+00	2.000000e+00	yes	no
+r_sc	3.000000e-01	5.928766e-01	1.100000e+00	yes	no
+r_sc	3.000000e-01	6.489940e-01	1.100000e+00	yes	no
+s_out	9.900000e-01	1.002229e+00	1.027013e+00	yes	no
+s_out	9.900000e-01	1.004934e+00	1.027013e+00	yes	no
+
+
+Nonlinear constraints
+variable	min_value	value	max_value	applied	satisfied	active
+p_out_error	0.000000e+00	-7.447951e-08	0.000000e+00	yes	yes	yes
+Y_error	0.000000e+00	-9.107254e-08	0.000000e+00	yes	yes	yes
+Y_error	0.000000e+00	-9.009857e-08	0.000000e+00	yes	yes	yes
+flare_angle	-1.745329e-01	1.745329e-01	1.745329e-01	yes	yes	yes
+flare_angle	-1.745329e-01	1.745329e-01	1.745329e-01	yes	yes	yes
+r_ht	6.000000e-01	6.909986e-01	9.000000e-01	yes	yes	no
+r_ht	6.000000e-01	6.526245e-01	9.000000e-01	yes	yes	no
+r_ht	6.000000e-01	6.526245e-01	9.000000e-01	yes	yes	no
+r_ht	6.000000e-01	6.153223e-01	9.000000e-01	yes	yes	no
+reaction	1.000000e-01	5.214914e-01	9.000000e-01	yes	yes	no
+Ma_rel		1.096338e-01	5.000000e+00	yes	yes	no
+Ma_rel		8.138968e-01	5.000000e+00	yes	yes	no
+Ma_rel		1.463173e-01	5.000000e+00	yes	yes	no
+Ma_rel		9.030446e-01	5.000000e+00	yes	yes	no
+Ma_rel		9.815124e-02	5.000000e+00	yes	yes	no
+Ma_diffuser		1.993685e-01	9.500000e-01	yes	yes	no
+beta_in_stator		0.000000e+00	2.617994e-01	yes	yes	no
+beta_in_rotor	-2.617994e-01	-2.617993e-01		yes	yes	yes
+height	1.000000e-02	1.876090e-01		no		
+height	1.000000e-02	2.140651e-01		no		
+chord	1.000000e-02	9.707715e-02		no		
+chord	1.000000e-02	1.091808e-01		no		
+RPM	3.600000e+03	7.232610e+03	3.600000e+03	no		
+
+
+Optimization algorithm output
+exitflag	iterations	function_count	con_violation	stepsize
+5	27	388	9.107254e-08	2.860835e-03
+

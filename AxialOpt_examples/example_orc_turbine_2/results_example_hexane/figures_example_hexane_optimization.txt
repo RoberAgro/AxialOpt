@@ -1,0 +1,77 @@
+Independent variables
+variable	lower_bound	value	upper_bound	satisfied	active
+w_s	1.000000e-01	5.820727e-01	1.000000e+01	yes	no
+d_s	1.000000e-01	2.044836e+00	1.000000e+01	yes	no
+vel_in	1.000000e-03	1.423897e-02	5.000000e-01	yes	no
+vel_out	5.000000e-02	6.203124e-01	1.250000e+00	yes	no
+vel_out	5.000000e-02	4.074110e-01	1.250000e+00	yes	no
+vel_out	5.000000e-02	4.173150e-01	1.250000e+00	yes	no
+vel_out	5.000000e-02	5.094962e-01	1.250000e+00	yes	no
+ang_out	6.981317e-01	1.396263e+00	1.396263e+00	yes	yes
+ang_out	-1.396263e+00	-1.241221e+00	-6.981317e-01	yes	no
+ang_out	6.981317e-01	1.145118e+00	1.396263e+00	yes	no
+ang_out	-1.396263e+00	-9.398795e-01	-6.981317e-01	yes	no
+r_Hc	1.000000e+00	1.000000e+00	2.000000e+00	yes	yes
+r_Hc	1.000000e+00	1.000000e+00	2.000000e+00	yes	yes
+r_Hc	1.000000e+00	1.000000e+00	2.000000e+00	yes	yes
+r_Hc	1.000000e+00	1.000000e+00	2.000000e+00	yes	yes
+r_sc	3.000000e-01	5.898560e-01	1.100000e+00	yes	no
+r_sc	3.000000e-01	5.307228e-01	1.100000e+00	yes	no
+r_sc	3.000000e-01	7.968379e-01	1.100000e+00	yes	no
+r_sc	3.000000e-01	9.192015e-01	1.100000e+00	yes	no
+s_out	9.900000e-01	1.027092e+00	1.108059e+00	yes	no
+s_out	9.900000e-01	1.040420e+00	1.108059e+00	yes	no
+s_out	9.900000e-01	1.043404e+00	1.108059e+00	yes	no
+s_out	9.900000e-01	1.051852e+00	1.108059e+00	yes	no
+
+
+Nonlinear constraints
+variable	min_value	value	max_value	applied	satisfied	active
+p_out_error	0.000000e+00	-9.788296e-10	0.000000e+00	yes	yes	yes
+Y_error	0.000000e+00	-5.990164e-09	0.000000e+00	yes	yes	yes
+Y_error	0.000000e+00	-1.189568e-08	0.000000e+00	yes	yes	yes
+Y_error	0.000000e+00	-5.083831e-09	0.000000e+00	yes	yes	yes
+Y_error	0.000000e+00	-5.654112e-07	0.000000e+00	yes	yes	yes
+flare_angle	-1.745329e-01	-1.745329e-01	1.745329e-01	yes	yes	yes
+flare_angle	-1.745329e-01	1.745329e-01	1.745329e-01	yes	yes	yes
+flare_angle	-1.745329e-01	1.745329e-01	1.745329e-01	yes	yes	yes
+flare_angle	-1.745329e-01	1.745329e-01	1.745329e-01	yes	yes	yes
+r_ht	6.000000e-01	7.794967e-01	9.500000e-01	yes	yes	no
+r_ht	6.000000e-01	8.274489e-01	9.500000e-01	yes	yes	no
+r_ht	6.000000e-01	8.274489e-01	9.500000e-01	yes	yes	no
+r_ht	6.000000e-01	7.626792e-01	9.500000e-01	yes	yes	no
+r_ht	6.000000e-01	7.626792e-01	9.500000e-01	yes	yes	no
+r_ht	6.000000e-01	7.000000e-01	9.500000e-01	yes	yes	no
+r_ht	6.000000e-01	7.000000e-01	9.500000e-01	yes	yes	no
+r_ht	6.000000e-01	6.164899e-01	9.500000e-01	yes	yes	no
+reaction	1.000000e-01	2.351712e-01	9.000000e-01	yes	yes	no
+reaction	1.000000e-01	5.947399e-01	9.000000e-01	yes	yes	no
+Ma_rel		4.088358e-02	5.000000e+00	yes	yes	no
+Ma_rel		1.577608e+00	5.000000e+00	yes	yes	no
+Ma_rel		5.556330e-01	5.000000e+00	yes	yes	no
+Ma_rel		1.030926e+00	5.000000e+00	yes	yes	no
+Ma_rel		3.454197e-01	5.000000e+00	yes	yes	no
+Ma_rel		1.060220e+00	5.000000e+00	yes	yes	no
+Ma_rel		4.498756e-01	5.000000e+00	yes	yes	no
+Ma_rel		1.309347e+00	5.000000e+00	yes	yes	no
+Ma_rel		3.004449e-01	5.000000e+00	yes	yes	no
+Ma_diffuser		7.723645e-01	9.500000e-01	yes	yes	no
+beta_in_stator		0.000000e+00	2.617994e-01	yes	yes	no
+beta_in_stator		2.617994e-01	2.617994e-01	yes	yes	yes
+beta_in_rotor	-2.617994e-01	1.055217e+00		yes	yes	no
+beta_in_rotor	-2.617994e-01	-2.321576e-01		yes	yes	no
+height	1.000000e-02	2.015703e-02		no		
+height	1.000000e-02	2.114700e-02		no		
+height	1.000000e-02	2.872187e-02		no		
+height	1.000000e-02	3.819518e-02		no		
+chord	1.000000e-02	2.015703e-02		no		
+chord	1.000000e-02	2.114700e-02		no		
+chord	1.000000e-02	2.872187e-02		no		
+chord	1.000000e-02	3.819518e-02		no		
+RPM	3.000000e+03	2.137290e+04	3.000000e+03	no		
+
+
+Optimization algorithm output
+exitflag	iterations	function_count	con_violation	stepsize
+2	52	1310	5.654112e-07	1.157784e-06
+
