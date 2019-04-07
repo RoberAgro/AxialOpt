@@ -43,9 +43,9 @@ _Note: AxialOpt is not suitable to estimate the performance of an existing desig
 
 
 ## Requisites
-AxialOpt was implemented in [MATLAB R2018a](https://nl.mathworks.com/) and requires a [REFPROP v9.1](https://dx.doi.org/10.18434/T4JS3C) installation. The folder [refprop-matlab-link](refprop-matlab-link) contains a short guide about how to link REFPROP with MATLAB.
+AxialOpt was implemented in [MATLAB R2018a](https://nl.mathworks.com/) and requires a [REFPROP v9.1](https://dx.doi.org/10.18434/T4JS3C) installation. The folder [link_refprop_matlab](link_refprop_matlab) contains a instructions about how to link REFPROP with MATLAB.
 
-AxialOpt has the option to use the [export_fig]((https://github.com/altmany/export_fig)) library to produce publication-quality figures. Using the export_fig library requires _ghostcript_ and _pdftops_. See the installation instructions in the [original repository](https://github.com/altmany/export_fig).
+AxialOpt has the option to use the [export_fig library](https://github.com/altmany/export_fig) to produce publication-quality figures. Using this library requires _ghostcript_ and _pdftops_. See the installation instructions in the [original repository](https://github.com/altmany/export_fig).
 
 
 
