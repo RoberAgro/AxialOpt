@@ -101,7 +101,7 @@ Ainley, D.G.; Mathieson, C.R. A Method of Performance Estimation for Axial-Flow 
 
 
 <a name="5"></a>
-Dunham, J.; Came, P.M. Improvements to the Ainley-MathiesonMethod of Turbine Performance Prediction. Journal of Engineering for Power 1970, 92, 252–256.
+Dunham, J.; Came, P.M. Improvements to the Ainley-Mathieson Method of Turbine Performance Prediction. Journal of Engineering for Power 1970, 92, 252–256.
 
 [![DOI Dunham_and_Came_loss_model_(1970)](https://img.shields.io/badge/DOI-Dunham_and_Came_loss_model_(1970)-blue.svg)](http://dx.doi.org/10.1115/1.3445349)
 
