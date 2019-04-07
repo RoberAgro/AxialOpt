@@ -80,31 +80,32 @@ R. Agromayor and L. O. Nord, Preliminary Design and Optimization of Axial Turbin
 <a name="2"></a>
 R. Agromayor, and L. O. Nord, AxialOpt - A Mean-Line Model for the Design and Optimization of Axial Turbines, Zenodo repository, 2019
 
-[![DOI AxialOpt_Zenodo_repository](https://img.shields.io/badge/DOI-AxialOpt_Zenodo_repository-blue.svg)](http://doi.10.5281/zenodo.2616406)
+[![DOI AxialOpt_Zenodo_repository](https://img.shields.io/badge/DOI-AxialOpt_Zenodo_repository-blue.svg)](https://doi.org/10.5281/zenodo.2616406)
 
 
 <a name="3"></a>
 E. W. Lemmon, M. L. Huber, and M. O. McLinden, NIST Standard Reference Database 23: Reference Fluid Thermodynamic and Transport Properties (REFPROP) version 9.1, National Institute of Standards and Technology, 2013.
 
-[[![DOI REFPROP_fluid_library](https://img.shields.io/badge/DOI-REFPROP_fluid_library-blue.svg)](https://dx.doi.org/10.18434/T4JS3C)]
+[![DOI REFPROP_fluid_library](https://img.shields.io/badge/DOI-REFPROP_fluid_library-blue.svg)](https://dx.doi.org/10.18434/T4JS3C)
 
 
 
 <a name="4"></a>
 Ainley, D.G.; Mathieson, C.R. A Method of Performance Estimation for Axial-Flow Turbines. Aeronautical Research Council Reports and Memoranda 1951, 2974, 1–30.
 
-[![URL Ainley_and_Mathieson_loss_model_(1951)](https://img.shields.io/badge/DOI-Ainley_and_Mathieson_loss_model_(1951)-blue.svg)]
+[![URL Ainley_and_Mathieson_loss_model_(1951)](https://img.shields.io/badge/DOI-Ainley_and_Mathieson_loss_model_(1951)-blue.svg)](https://apps.dtic.mil/dtic/tr/fulltext/u2/a950664.pdf)
+
 
 <a name="5"></a>
 Dunham, J.; Came, P.M. Improvements to the Ainley-MathiesonMethod of Turbine Performance Prediction. Journal of Engineering for Power 1970, 92, 252–256.
 
-[![DOI Dunham_and_Came_loss_model_(1970)](https://img.shields.io/badge/DOI-Dunham_and_Came_loss_model_(1970)-blue.svg)]
+[![DOI Dunham_and_Came_loss_model_(1970)](https://img.shields.io/badge/DOI-Dunham_and_Came_loss_model_(1970)-blue.svg)](https://doi:10.1115/1.3445349)
 
 
 <a name="6"></a>
 Kacker, S.C.; Okapuu, U. A Mean Line Prediction Method for Axial Flow Turbine Efficiency. Journal of Engineering for Power 1982, 104, 111–119.
 
-[![DOI Kacker_and_Okapuu_loss_model_(1982)](https://img.shields.io/badge/DOI-Kacker_and_Okapuu_loss_model_(1982)-blue.svg)]
+[![DOI Kacker_and_Okapuu_loss_model_(1982)](https://img.shields.io/badge/DOI-Kacker_and_Okapuu_loss_model_(1982)-blue.svg)](https://doi:10.1115/1.3227240)
 
 
 <a name="7"></a>
