@@ -31,12 +31,16 @@ The models and optimization methodology of AxialOpt are documented in a peer-rev
       1. Sequential Quadratic Programming (SQP)
       2. Interior Point (IP)
 * The output of AxialOpt can be saved as:
-  1. Text file containing a summary of the solution of the optimization problem
-  2. Text files containing the geometry of each cascade and variables at each station
-  3. Figures with the T-s and h-s diagrams of the expansion
-  4. Figures with the the velocity triangles
-  5. Figures with the axial-radial and axial-tangential views of the turbine
-  6. Figures with the breakdown of the losses within the turbine
+  1. Data files:
+      1. Summary of the solution of the optimization problem
+      2. Geometry of each cascade
+      3. Thermodynamic properties at each station
+      4. Velocity triangles of each stage
+  2. Figures:
+      1. T-s and h-s diagrams of the expansion
+      2. Velocity triangles of each stage
+      3. Axial-radial and axial-tangential views of the turbine
+      4. Breakdown of the losses within the turbine
   
 _Note: AxialOpt is not suitable to estimate the performance of an existing design under different conditions. The extension of the code to compute the performance at off-design conditions is underway._
 
@@ -109,7 +113,7 @@ Kacker, S.C.; Okapuu, U. A Mean Line Prediction Method for Axial Flow Turbine Ef
 
 
 <a name="7"></a>
-Craig, H.R.M.; Cox, H.J.A. Performance Estimation of Axial Flow Turbines. Proceedings of the Institution of Mechanical Engineers 1971, 185, 407–424.
+Craig, H.R.M.; Cox, H.J.A. Performance Estimation of Axial Flow Turbines. Proceedings of the Institution of Mechanical Engineers 1970, 185, 407–424.
 
 [![DOI Craig_and_Cox_loss_model_(1970)](https://img.shields.io/badge/DOI-Craig_and_Cox_loss_model_(1970)-blue.svg)](https://doi.org/10.1243/PIME_PROC_1970_185_048_02)
 
