@@ -85,32 +85,29 @@ R. Agromayor, and L. O. Nord, AxialOpt - A Mean-Line Model for the Design and Op
 <a name="3"></a>
 E. W. Lemmon, M. L. Huber, and M. O. McLinden, NIST Standard Reference Database 23: Reference Fluid Thermodynamic and Transport Properties (REFPROP) version 9.1, National Institute of Standards and Technology, 2013.
 
-[![DOI](https://img.shields.io/badge/DOI-https://dx.doi.org/10.18434/T4JS3C-blue.svg)](https://dx.doi.org/10.18434/T4JS3C)
+[![DOI REFPROP_fluid_library](https://img.shields.io/badge/DOI-REFPROP_fluid_library-blue.svg)](https://dx.doi.org/10.18434/T4JS3C)
 
 
 
 <a name="4"></a>
 Ainley, D.G.; Mathieson, C.R. A Method of Performance Estimation for Axial-Flow Turbines. Aeronautical Research Council Reports and Memoranda 1951, 2974, 1–30.
 
-[![URL https://apps.dtic.mil/dtic/tr/fulltext/u2/a950664.pdf]](https://img.shields.io/badge/DOI-https://apps.dtic.mil/dtic/tr/fulltext/u2/a950664.pdf-blue.svg)(https://apps.dtic.mil/dtic/tr/fulltext/u2/a950664.pdf)
-
+![URL Ainley_and_Mathieson_(1951)_loss_model](https://img.shields.io/badge/DOI-Ainley_and_Mathieson_(1951)_loss_model-blue.svg)
 
 <a name="5"></a>
 Dunham, J.; Came, P.M. Improvements to the Ainley-MathiesonMethod of Turbine Performance Prediction. Journal of Engineering for Power 1970, 92, 252–256.
 
-[![DOI https://dx.doi:10.1115/1.3227240](https://img.shields.io/badge/DOI-https://dx.doi:10.1115/1.3227240-blue.svg)](https://dx.doi:10.1115/1.3227240)
+![DOI Dunham_and_Came_(1970)_loss_model](https://img.shields.io/badge/DOI-Dunham_and_Came_(1970)_loss_model-blue.svg)
 
 
 <a name="6"></a>
-Kacker, 637 S.C.; Okapuu, U. A Mean Line Prediction Method for Axial Flow Turbine Efficiency. Journal of Engineering for Power 1982, 104, 111–119.
+Kacker, S.C.; Okapuu, U. A Mean Line Prediction Method for Axial Flow Turbine Efficiency. Journal of Engineering for Power 1982, 104, 111–119.
 
-[![DOI https://dx.doi:10.1115/1.3227240](https://img.shields.io/badge/DOI-https://dx.doi:10.1115/1.3227240-blue.svg)]
-(https://dx.doi:10.1115/1.3227240)
+![DOI Kacker_and_Okapuu_(1982)_loss_model](https://img.shields.io/badge/DOI-Kacker_and_Okapuu_(1982)_loss_model-blue.svg)
 
 
 <a name="7"></a>
 Craig, H.R.M.; Cox, H.J.A. Performance Estimation of Axial Flow Turbines. Proceedings of the Institution of Mechanical Engineers 1971, 185, 407–424.
 
-[![DOI https://doi.org/10.1243/PIME_PROC_1970_185_048_02](https://img.shields.io/badge/DOI-https://doi.org/10.1243/PIME_PROC_1970_185_048_02-blue.svg)](https://doi.org/10.1243/PIME_PROC_1970_185_048_02)
-
+![DOI Craig_and_Cox_(1970)_loss_model](https://img.shields.io/badge/DOI-Craig_and_Cox_(1970)_loss_model-blue.svg)
 
