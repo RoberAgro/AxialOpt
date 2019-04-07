@@ -87,23 +87,27 @@ E. W. Lemmon, M. L. Huber, and M. O. McLinden, NIST Standard Reference Database 
 
 [![DOI](https://img.shields.io/badge/DOI-https://dx.doi.org/10.18434/T4JS3C-blue.svg)](https://dx.doi.org/10.18434/T4JS3C)
 
+
+
 <a name="4"></a>
-Ainley, D.G.; Mathieson, C.R. A Method of Performance Estimation for Axial-Flow Turbines. Aeronautical
-647 Research Council Reports and Memoranda 1951, 2974, 1–30.
+Ainley, D.G.; Mathieson, C.R. A Method of Performance Estimation for Axial-Flow Turbines. Aeronautical Research Council Reports and Memoranda 1951, 2974, 1–30.
+https://apps.dtic.mil/dtic/tr/fulltext/u2/a950664.pdf
+
 
 <a name="5"></a>
-Dunham, J.; Came, P.M. Improvements to the Ainley-MathiesonMethod of Turbine Performance Prediction.
-649 Journal of Engineering for Power 1970, 92, 252–256.
+Dunham, J.; Came, P.M. Improvements to the Ainley-MathiesonMethod of Turbine Performance Prediction. Journal of Engineering for Power 1970, 92, 252–256.
+doi:10.1115/1.3227240
+
 
 <a name="6"></a>
-Kacker, 637 S.C.; Okapuu, U. A Mean Line Prediction Method for Axial Flow Turbine Efficiency. Journal of
-638 Engineering for Power 1982, 104, 111–119.
+Kacker, 637 S.C.; Okapuu, U. A Mean Line Prediction Method for Axial Flow Turbine Efficiency. Journal of Engineering for Power 1982, 104, 111–119.
+doi:10.1115/1.3227240
+
 
 <a name="7"></a>
-Craig, H.R.M.; Cox, H.J.A. Performance Estimation of Axial Flow Turbines. Proceedings of the Institution of
-658 Mechanical Engineers 1971, 185, 407–424.
+Craig, H.R.M.; Cox, H.J.A. Performance Estimation of Axial Flow Turbines. Proceedings of the Institution of Mechanical Engineers 1971, 185, 407–424.
 
-
+https://doi.org/10.1243/PIME_PROC_1970_185_048_02
 
 
 
