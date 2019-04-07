@@ -9,37 +9,36 @@ The models and optimization methodology of AxialOpt are documented in a peer-rev
   1. A meanline model to describe the flow in each cascade.
   2. An empirical loss model to evaluate the entropy generation in each cascade.
   3. A [one-dimensional flow diffuser model](https://github.com/RoberAgro/AnnularDiffuser1D) to compute the exit kinetic energy recovery.
-* The model is formulated for axial turbines with any number of stages.
+* The model is formulated for axial turbines with any number of stages
 * The model is formulated to use arbitrary equations of state to compute thermodynamic properties:
-  1. The current version uses the [REFPROP v9.1](https://dx.doi.org/10.18434/T4JS3C) fluid library.
-  2. Other fluid libraries and look-up tables may be implemented in the future.
+  1. The current version uses the [REFPROP v9.1](https://dx.doi.org/10.18434/T4JS3C) fluid library
+  2. Other fluid libraries and look-up tables may be implemented in the future
 * The loss model is formulated in a general way to use:
   1. Any set of empirical correlations to compute the losses:
-      1. Ainley and Mathieson (implemented).
-      2. Dunhan and Came (implemented).
-      3. Kacker and Okapuu (implemented).
-      4. Craig and Cox (will be implemented soon).
-      5. Other loss model contributions are welcome.
+      1. Ainley and Mathieson (implemented)
+      2. Dunhan and Came (implemented)
+      3. Kacker and Okapuu (implemented)
+      4. Craig and Cox (will be implemented soon)
+      5. Other loss model contributions are welcome
   2. Different definitions for the loss coefficient:
-      1. Stagnation pressure loss coefficient.
-      2. Enthalpy loss coefficient (also known as kinetic energy loss coefficient).
-      3. Entropy loss coefficient.
-* The preliminary design is formulated as a constrained optimization problem.
-  1. This allows explore the design space in a systematic way and account for technical constraints.
-  2. It is straighforward to modify the objective function and constraints depending on the problem.
+      1. Stagnation pressure loss coefficient
+      2. Enthalpy loss coefficient (also known as kinetic energy loss coefficient)
+      3. Entropy loss coefficient
+* The preliminary design is formulated as a constrained optimization problem
+  1. This allows explore the design space in a systematic way and account for technical constraints
+  2. It is straighforward to modify the objective function and constraints depending on the problem
   3. There are several gradient-based algorithms available to solve the optimization problem, including:
-      1. Sequential Quadratic Programming (SQP).
-      2. Interior Point (IP).
+      1. Sequential Quadratic Programming (SQP)
+      2. Interior Point (IP)
 * The output of AxialOpt can be saved as:
-  1. Text file containing a summary of the solution of the optimization problem.
-  2. Text files containing the geometry of each cascade and variables at each station.
-  3. Figures with the T-s and h-s diagrams of the expansion.
-  4. Figures with the the velocity triangles.
-  5. Figures with the axial-radial and axial-tangential views of the turbine.
-  6. Figures with the breakdown of the losses within the turbine.
-
-_Note: AxialOpt is not suitable to estimate the performance of an existing design under different conditions.
-  The extension of the code to compute the performance at off-design conditions is underway._
+  1. Text file containing a summary of the solution of the optimization problem
+  2. Text files containing the geometry of each cascade and variables at each station
+  3. Figures with the T-s and h-s diagrams of the expansion
+  4. Figures with the the velocity triangles
+  5. Figures with the axial-radial and axial-tangential views of the turbine
+  6. Figures with the breakdown of the losses within the turbine
+  
+_Note: AxialOpt is not suitable to estimate the performance of an existing design under different conditions. The extension of the code to compute the performance at off-design conditions is underway._
 
 
 
@@ -52,11 +51,11 @@ AxialOpt has the option to use the [export_fig]((https://github.com/altmany/expo
 
 ## Examples
 The folder [AxialOpt_examples](AxialOpt_examples) contains five examples commented in detail to get started with the code:
-  * A supercritical Carbon dioxide turbine.
-  * A organic Rankine cycle (ORC) turbine using R125 as working fluid.
-  * A organic Rankine cycle (ORC) turbine using hexane as working fluid.
-  * An industrial gas turbine.
-  * A high-pressure steam turbine.
+  * A supercritical Carbon dioxide turbine
+  * A organic Rankine cycle (ORC) turbine using R125 as working fluid
+  * A organic Rankine cycle (ORC) turbine using hexane as working fluid
+  * An industrial gas turbine
+  * A high-pressure steam turbine
 These examples show the capabilities AxialOpt and you can use them as a template to start your own projects.
 
 
