@@ -1,17 +1,17 @@
 # AxialOpt
 AxialOpt is a code for the preliminary design and optimization of axial turbines. The output of AxialOpt can be used in system-level analyses (such as a power cycle optimization) to estimate the efficiency or footprint of axial turbines for a given set of thermodynamic specifications. In addition, the information provided by AxialOpt can be used as the starting point for the aerodynamic design of the turbine blades using more advanced flow models based on CFD.
 
-The models and optimization methodology of AxialOpt are documented in a peer-reviewed, open-access publication [1](#1) and the source code is also stored in a Zenodo repository [2].
+The models and optimization methodology of AxialOpt are documented in a peer-reviewed, open-access publication [[1]](#1) and the source code is also stored in a Zenodo repository [[1]](#1).
 
 ## Features
 
 * The axial turbine model is composed of three sub-models that are used as building blocks:
   1. A meanline model to describe the flow in each cascade.
   2. An empirical loss model to evaluate the entropy generation in each cascade.
-  3. A one-dimensional flow model to account for the influence of the diffuser.
+  3. A [one-dimensional flow model](https://github.com/RoberAgro/AnnularDiffuser1D) to account for the influence of the diffuser.
 * The model is formulated for axial turbines with any number of stages.
 * The model is formulated to use arbitrary equations of state to compute thermodynamic properties:
-  1. The current version uses the REFPROP v9.1 fluid library.
+  1. The current version uses the [REFPROP v9.1](#4) fluid library.
   2. Other fluid libraries and look-up tables may be implemented in the future.
 * The loss model is formulated in a general way to use:
   1. Any set of empirical correlations to compute the losses:
@@ -44,9 +44,9 @@ _Note: AxialOpt is not suitable to estimate the performance of an existing desig
 
 
 ## Requisites
-AxialOpt was implemented in MATLAB R2018a [3] and requires a REFPROP v9.1 installation [4]. The folder [refprop-matlab](AnnularDiffuser1D/refprop-matlab) contains a short guide about how to link REFPROP with MATLAB.
+AxialOpt was implemented in MATLAB R2018a [[3]](#3)and requires a REFPROP v9.1 installation [[4]](#4). The folder [refprop-matlab-link](refprop-matlab-link) contains a short guide about how to link REFPROP with MATLAB.
 
-AxialOpt has the option to use the export_fig library to produce publication-quality figures. Using the export_fig library requires _ghostcript_ and _pdftops_. See the installation instructions in the original repository.
+AxialOpt has the option to use the export_fig library to produce publication-quality figures. Using the export_fig library requires _ghostcript_ and _pdftops_. See the installation instructions in the [original repository](https://github.com/altmany/export_fig).
 
 
 
