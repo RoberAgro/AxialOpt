@@ -6,9 +6,9 @@ The models and optimization methodology of AxialOpt are documented in a peer-rev
 ## Features
 
 * The axial turbine model is composed of three sub-models that are used as building blocks:
-  1. A meanline model to describe the flow in each cascade.
-  2. An empirical loss model to evaluate the entropy generation in each cascade.
-  3. A [one-dimensional flow diffuser model](https://github.com/RoberAgro/AnnularDiffuser1D) to compute the exit kinetic energy recovery.
+  1. A meanline model to describe the flow in each cascade
+  2. An empirical loss model to evaluate the entropy generation in each cascade
+  3. A [one-dimensional flow diffuser model](https://github.com/RoberAgro/AnnularDiffuser1D) to compute the exit kinetic energy recovery
 * The model is formulated for axial turbines with any number of stages
 * The model is formulated to use arbitrary equations of state to compute thermodynamic properties:
   1. The current version uses the [REFPROP v9.1](https://dx.doi.org/10.18434/T4JS3C) fluid library
