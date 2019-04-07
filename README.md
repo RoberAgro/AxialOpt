@@ -72,34 +72,34 @@ Please drop us an email to [roberto.agromayor@ntnu.no](mailto:roberto.agromayor@
 
 
 ## References
-<a name="#1"></a>
+<a name="1"></a>
 R. Agromayor and L. O. Nord, Preliminary Design and Optimization of Axial Turbines Accounting for Diffuser Performance, International Journal of Turbomachinery, Propulsion and Power (submitted).
 
 [![DOI](https://img.shields.io/badge/DOI-Diffuser_paper_DOI-blue.svg)](https://www.google.com) (not ready yet)
 
-<a name="#2"></a>
+<a name="2"></a>
 R. Agromayor, and L. O. Nord, AxialOpt - A Mean-Line Model for the Design and Optimization of Axial Turbines, Zenodo repository, 2019
 
 [![DOI](https://zenodo.org/badge/178391900.svg)](https://zenodo.org/badge/latestdoi/178391900)
 
-<a name="#3"></a>
+<a name="3"></a>
 E. W. Lemmon, M. L. Huber, and M. O. McLinden, NIST Standard Reference Database 23: Reference Fluid Thermodynamic and Transport Properties (REFPROP) version 9.1, National Institute of Standards and Technology, 2013.
 
 [![DOI](https://img.shields.io/badge/DOI-https://dx.doi.org/10.18434/T4JS3C-blue.svg)](https://dx.doi.org/10.18434/T4JS3C)
 
-<a name="#4"></a>
+<a name="4"></a>
 Ainley, D.G.; Mathieson, C.R. A Method of Performance Estimation for Axial-Flow Turbines. Aeronautical
 647 Research Council Reports and Memoranda 1951, 2974, 1–30.
 
-<a name="#5"></a>
+<a name="5"></a>
 Dunham, J.; Came, P.M. Improvements to the Ainley-MathiesonMethod of Turbine Performance Prediction.
 649 Journal of Engineering for Power 1970, 92, 252–256.
 
-<a name="#6"></a>
+<a name="6"></a>
 Kacker, 637 S.C.; Okapuu, U. A Mean Line Prediction Method for Axial Flow Turbine Efficiency. Journal of
 638 Engineering for Power 1982, 104, 111–119.
 
-<a name="#7"></a>
+<a name="7"></a>
 Craig, H.R.M.; Cox, H.J.A. Performance Estimation of Axial Flow Turbines. Proceedings of the Institution of
 658 Mechanical Engineers 1971, 185, 407–424.
 
