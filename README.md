@@ -99,13 +99,13 @@ Ainley, D.G.; Mathieson, C.R. A Method of Performance Estimation for Axial-Flow 
 <a name="5"></a>
 Dunham, J.; Came, P.M. Improvements to the Ainley-MathiesonMethod of Turbine Performance Prediction. Journal of Engineering for Power 1970, 92, 252–256.
 
-[![DOI Dunham_and_Came_loss_model_(1970)](https://img.shields.io/badge/DOI-Dunham_and_Came_loss_model_(1970)-blue.svg)](https://doi:10.1115/1.3445349)
+[![DOI Dunham_and_Came_loss_model_(1970)](https://img.shields.io/badge/DOI-Dunham_and_Came_loss_model_(1970)-blue.svg)](http://dx.doi.org/10.1115/1.3445349)
 
 
 <a name="6"></a>
 Kacker, S.C.; Okapuu, U. A Mean Line Prediction Method for Axial Flow Turbine Efficiency. Journal of Engineering for Power 1982, 104, 111–119.
 
-[![DOI Kacker_and_Okapuu_loss_model_(1982)](https://img.shields.io/badge/DOI-Kacker_and_Okapuu_loss_model_(1982)-blue.svg)](https://doi:10.1115/1.3227240)
+[![DOI Kacker_and_Okapuu_loss_model_(1982)](https://img.shields.io/badge/DOI-Kacker_and_Okapuu_loss_model_(1982)-blue.svg)](http://dx.doi.org/10.1115/1.3227240)
 
 
 <a name="7"></a>
