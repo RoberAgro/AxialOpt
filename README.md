@@ -15,43 +15,44 @@ Mean-linemodels assume that the flow
 
 
 ## Features
-* The code was formulated for axial turbines with any number of stages
+
 * The axial turbine model is composed of three sub-models that are used as building blocks:
-  1. A meanline model to describe the flow in each cascade.
-  2. An empirical loss model to evaluate the entropy generation in each cascade.
-  3. A one-dimensional flow model to account for the influence of the diffuser.
-* The preliminary design is formulated as a constrained optimization problem.
-  * This allows explore the design space in a systematic way and account for technical constraints
-  * It is straighforward to modify the objective function and constraints depending on the problem.
-  * There are several gradient-based algorithms available to solve the optimization problem, including:
-    1. Sequential Quadratic Programming (SQP)
-    2. Interior Point (IP)
-* The turbine model is formulated to use arbitrary equations of state to compute thermodynamic properties.
-  * The current version uses the REFPROP v9.1 fluid library
-  * Other fluid libraries and look-up tables may be implemented in the future
-* The loss model is formulated in a general way
-  * It is possible to use any set of empirical correlations to compute the losses
+  1. A meanline model to describe the flow in each cascade
+  2. An empirical loss model to evaluate the entropy generation in each cascade
+  3. A one-dimensional flow model to account for the influence of the diffuser
+* The model is formulated for axial turbines with any number of stages
+* The model is formulated to use arbitrary equations of state to compute thermodynamic properties
+  1. The current version uses the REFPROP v9.1 fluid library
+  2. Other fluid libraries and look-up tables may be implemented in the future
+* The loss model is formulated in a general way to use:
+  1. Any set of empirical correlations to compute the losses
     1. Ainley and Mathieson (implemented)
     2. Dunhan and Came (implemented)
     3. Kacker and Okapuu (implemented)
     4. Craig and Cox (will be implemented soon)
-  * It is possible to use different definitions for the loss coefficient
+    5. Other loss model contributions are welcome
+  2. Different definitions for the loss coefficient
     1. Stagnation pressure loss coefficient
     2. Enthalpy loss coefficient (also known as kinetic energy loss coefficient)
     3. Entropy loss coefficient
-    _Note: Feel free to contact if you have implemented another loss model and would like to contribute to this repository_  
-* The output of AxialOpt can be saved as
-  * Text files including:
-    * The velocity triangles
-    * The thermodynamic states
-    * The turbine geometry
-    * A summary of the solution of the optimization problem
-  * Figures including:
-    * The expansion in the T-s and h-s diagrams
-    * The velocity triangles
-    * The axial-radial and axial-tangential views of the turbine
-    * The breakdown of the losses within the turbine
-  
+* The preliminary design is formulated as a constrained optimization problem.
+  1. This allows explore the design space in a systematic way and account for technical constraints
+  2. It is straighforward to modify the objective function and constraints depending on the problem.
+  3. There are several gradient-based algorithms available to solve the optimization problem, including:
+    1. Sequential Quadratic Programming (SQP)
+    2. Interior Point (IP)
+* The output of AxialOpt can be saved as:
+  1. Text files containing:
+    1. The velocity triangles
+    2. The thermodynamic states
+    3. The turbine geometry
+    4. A summary of the solution of the optimization problem
+  2. Figures containing:
+    1. The expansion in the T-s and h-s diagrams
+    2. The velocity triangles
+    3. The axial-radial and axial-tangential views of the turbine
+    4. The breakdown of the losses within the turbine
+
 ## Examples
 The folder xxxx contains five examples that illustrate the capabilities of the code, including
 
@@ -64,7 +65,7 @@ These examples illustrate that AxialOpt can be used to optimize turbines for a w
 
 can be used as a template for your own project
 
-
+    _Note: Feel free to contact if you have implemented another loss model and would like to contribute to this repository_  
 ## Requisites
 AxialOpt was implemented in MATLAB R2018a [3] and requires a REFPROP v9.1 installation [4] (see instructions).
 
