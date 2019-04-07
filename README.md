@@ -1,7 +1,7 @@
 # AxialOpt
 AxialOpt is a code for the preliminary design and optimization of axial turbines. The output of AxialOpt can be used in system-level analyses (such as a power cycle optimization) to estimate the efficiency or footprint of axial turbines for a given set of thermodynamic specifications. In addition, the information provided by AxialOpt can be used as the starting point for the aerodynamic design of the turbine blades using more advanced flow models based on CFD.
 
-The models and optimization methodology of AxialOpt are documented in a peer-reviewed, open-access publication [[1]](#1) and the source code is also stored in a [Zenodo repository](https://doi.org/10.5281/zenodo.2616406).  [Zenodo repository](https://zenodo.org/badge/latestdoi/178391900).
+The models and optimization methodology of AxialOpt are documented in a peer-reviewed, [open-access publication](https://www.google.com) and the source code is also stored in a [Zenodo repository](https://doi.org/10.5281/zenodo.2616406).
 
 ## Features
 
@@ -44,24 +44,20 @@ _Note: AxialOpt is not suitable to estimate the performance of an existing desig
 
 
 ## Requisites
-AxialOpt was implemented in MATLAB R2018a [[3]](#3)and requires a REFPROP v9.1 installation [[4]](#4). The folder [refprop-matlab-link](refprop-matlab-link) contains a short guide about how to link REFPROP with MATLAB.
+AxialOpt was implemented in [MATLAB R2018a](https://nl.mathworks.com/) and requires a [REFPROP v9.1](https://dx.doi.org/10.18434/T4JS3C) installation. The folder [refprop-matlab-link](refprop-matlab-link) contains a short guide about how to link REFPROP with MATLAB.
 
-AxialOpt has the option to use the export_fig library to produce publication-quality figures. Using the export_fig library requires _ghostcript_ and _pdftops_. See the installation instructions in the [original repository](https://github.com/altmany/export_fig).
+AxialOpt has the option to use the [export_fig]((https://github.com/altmany/export_fig)) library to produce publication-quality figures. Using the export_fig library requires _ghostcript_ and _pdftops_. See the installation instructions in the [original repository](https://github.com/altmany/export_fig).
 
 
 
 ## Examples
-The folder [AxialOpt_examples](AxialOpt_examples)  AxialOpt_examples contains five commented examples to get started with the code:
+The folder [AxialOpt_examples](AxialOpt_examples) contains five examples commented in detail to get started with the code:
   * A supercritical Carbon dioxide turbine.
   * A organic Rankine cycle (ORC) turbine using R125 as working fluid.
   * A organic Rankine cycle (ORC) turbine using hexane as working fluid.
   * An industrial gas turbine.
   * A high-pressure steam turbine.
-These examples show the capabilities AxialOpt and you can use them as a template to start your own projects!
-
-## Contributions
-
-    _Note: Feel free to contact if you have implemented another loss model and would like to contribute to this repository_  
+These examples show the capabilities AxialOpt and you can use them as a template to start your own projects.
 
 
 ## License
@@ -69,15 +65,9 @@ AxialOpt is licensed under the terms of the MIT license. See the [license file](
 
 
 ## Contact information
-AxialOpt was developed by PhD candidate [Roberto Agromayor](https://www.ntnu.edu/employees/roberto.agromayor) and Associate Professor [Lars Olof Nord](https://www.ntnu.edu/employees/lars.nord) at the [Thermal Energy Research Group](https://www.ntnu.edu/ept/thermal-energy1
-) of the [Norwegian University of Science and Technology (NTNU)](https://www.ntnu.no/)
+AxialOpt was developed by PhD candidate [Roberto Agromayor](https://www.ntnu.edu/employees/roberto.agromayor) and Associate Professor [Lars Olof Nord](https://www.ntnu.edu/employees/lars.nord) at the [Process and Power Research Group](https://www.ntnu.edu/ept/process-power#/view/about) of the [Norwegian University of Science and Technology (NTNU)](https://www.ntnu.no/)
 
-Contact the email address [roberto.agromayor@ntnu.no](mailto:roberto.agromayor@ntnu.no) for inquiries about the code.
-
-
-Please feel free to submit any bugs or feature requests. We'd also love to hear about your experiences with autograd in general. Drop us an email!
-
-Contributions and bug reports are welcome!
+Please drop us an email to [roberto.agromayor@ntnu.no](mailto:roberto.agromayor@ntnu.no) if you have questions about the code or you find a bug to report. We would also love to hear about your experiences with AxialOpt in general.
 
 
 
