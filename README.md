@@ -61,7 +61,7 @@ The folder [AxialOpt_examples](AxialOpt_examples) contains five examples comment
   * An industrial gas turbine
   * A high-pressure steam turbine
   
-These examples show the capabilities AxialOpt and you can use them as a template to start your own projects.
+These examples show the capabilities AxialOpt and they can be used as a template to start your own projects.
 
 
 ## License
