@@ -69,11 +69,14 @@ AxialOpt is licensed under the terms of the MIT license. See the [license file](
 
 
 ## Contact information
-AxialOpt was developed by PhD candidate [Roberto Agromayor](https://www.ntnu.edu/employees/roberto.agromayor) and Associate Professor [Lars Olof Nord](https://www.ntnu.edu/employees/lars.nord) at the [Process and Power Research Group](https://www.ntnu.edu/ept/process-power#/view/about) of the [Norwegian University of Science and Technology (NTNU)](https://www.ntnu.no/)
+AxialOpt was developed by PhD candidate [Roberto Agromayor](https://www.ntnu.edu/employees/roberto.agromayor) and Associate Professor [Lars O. Nord](https://www.ntnu.edu/employees/lars.nord) at the [Process and Power Research Group](https://www.ntnu.edu/ept/process-power#/view/about) of the [Norwegian University of Science and Technology (NTNU)](https://www.ntnu.no/)
 
 Please drop us an email to [roberto.agromayor@ntnu.no](mailto:roberto.agromayor@ntnu.no) if you have questions about the code or you have a bug to report. We would also love to hear about your experiences with AxialOpt in general.
 
 
+## How to cite AxialOpt?
+Please use the DOI of the Zenodo repository if you want to cite AxialOpt in a scientific publication.
+complete this later
 
 ## References
 <a name="1"></a>
