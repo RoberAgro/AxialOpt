@@ -14,10 +14,17 @@ clc
 
 % Add the path to the AxialOpt_source directory
 % The function genpath() is very convenient
-addpath(genpath('../../AxialOpt_source'))
+addpath(genpath('../../AxialOpt_source_code'))
 
 % Call the script to define the design parameters and optimization problem
 input_parameters
+
+% Create a directory to store the figures (you can personalize the name)
+my_filename = ['figures_example_', fluid];
+my_figures_path = fullfile(pwd, my_filename);
+if exist(my_figures_path, 'dir') ~= 7    % This is a MATLAB's convention
+    mkdir(my_figures_path)
+end
 
 % Create a directory to store the results (you can personalize the name)
 my_filename = ['results_example_', fluid];
@@ -26,12 +33,6 @@ if exist(my_results_path, 'dir') ~= 7    % This is a MATLAB's convention
     mkdir(my_results_path)
 end
 
-% Create a directory to store the figures (you can personalize the name)
-my_filename = ['figures_example_', fluid];
-my_figures_path = fullfile(pwd, my_filename);
-if exist(my_figures_path, 'dir') ~= 7    % This is a MATLAB's convention
-    mkdir(my_figures_path)
-end
 
 % Be tidy and clear the worskpace now that we stored everything (optional)
 clearvars -except optimization_problem parameters_turbine my_filename my_figures_path my_results_path    
@@ -47,12 +48,13 @@ choose_plots = struct('diagram_hs',            'yes', ...                  % Ent
                       'triangles_A',           'yes', ...                  % Velocity triangles with blade velocity common origin
                       'triangles_B',           'yes', ...                  % Velocity triangles with flow velocity common origin
                       'loss_breakdown',        'yes', ...                  % Breakdown of the efficiency loss
-                      'save',                  'full');                    % Choose wether to save the figure or not. Options:
+                      'save',                  'no');                    % Choose wether to save the figure or not. Options:
                                                                            % 1) 'full' saves the figure in vector and in high quality raster format using the export_fig library (long computational time)
                                                                            % 2) 'lite' saves the figure in vector format using the default MATLAB export function (short computational time)
                                                                            % 3) 'no' do not save the figures
                                                                            
 % Using saving option full requires: 1) ghoscript and 2) pdftops
+%  https://github.com/altmany/export_fig
 %  http://www.ghostscript.com
 %  http://xpdfreader.com
 
@@ -64,9 +66,9 @@ choose_plots = struct('diagram_hs',            'yes', ...                  % Ent
 
 
 %% Plot the initial guess
-close all
-turbine_data = AxialOpt_computation(optimization_problem.x0,parameters_turbine);
-AxialOpt_plot(turbine_data,choose_plots,my_filename,my_figures_path);
+% close all
+% turbine_data = AxialOpt_computation(optimization_problem.x0,parameters_turbine);
+% AxialOpt_plot(turbine_data,choose_plots,my_filename,my_figures_path);
 
 
 %% Solve the optimization problem
@@ -75,18 +77,18 @@ AxialOpt_plot(turbine_data,choose_plots,my_filename,my_figures_path);
 multistart = 'no';
 N_multistart = 15;
 tic
-[x_opt,f_opt,exitflag,output,solutions] = AxialOpt_optimization(parameters_turbine,optimization_problem,multistart,N_multistart);
+[x_opt,f_opt,exitflag,output,solutions] = AxialOpt_main_optimization(parameters_turbine,optimization_problem,multistart,N_multistart);
 toc
 
 
 %% Plot the optimum solution
 close all
-turbine_data = AxialOpt_computation(x_opt,parameters_turbine);
+turbine_data = AxialOpt_model_turbine(x_opt,parameters_turbine);
 AxialOpt_plot(turbine_data,choose_plots,my_filename,my_figures_path);
 
 
 %% Print the optimization results in .txt files
-turbine_data = AxialOpt_computation(x_opt,parameters_turbine);
+turbine_data = AxialOpt_model_turbine(x_opt,parameters_turbine);
 turbine_data.optimization.exitflag = exitflag;
 turbine_data.optimization.output = output;
 AxialOpt_print_results(turbine_data,my_filename,my_results_path)

@@ -19,6 +19,13 @@ addpath(genpath('../../AxialOpt_source_code'))
 % Call the script to define the design parameters and optimization problem
 input_parameters
 
+% Create a directory to store the figures (you can personalize the name)
+my_filename = ['figures_example_', fluid];
+my_figures_path = fullfile(pwd, my_filename);
+if exist(my_figures_path, 'dir') ~= 7    % This is a MATLAB's convention
+    mkdir(my_figures_path)
+end
+
 % Create a directory to store the results (you can personalize the name)
 my_filename = ['results_example_', fluid];
 my_results_path = fullfile(pwd, my_filename);
@@ -26,12 +33,6 @@ if exist(my_results_path, 'dir') ~= 7    % This is a MATLAB's convention
     mkdir(my_results_path)
 end
 
-% Create a directory to store the figures (you can personalize the name)
-my_filename = ['figures_example_', fluid];
-my_figures_path = fullfile(pwd, my_filename);
-if exist(my_figures_path, 'dir') ~= 7    % This is a MATLAB's convention
-    mkdir(my_figures_path)
-end
 
 % Be tidy and clear the worskpace now that we stored everything (optional)
 clearvars -except optimization_problem parameters_turbine my_filename my_figures_path my_results_path    
@@ -53,6 +54,7 @@ choose_plots = struct('diagram_hs',            'yes', ...                  % Ent
                                                                            % 3) 'no' do not save the figures
                                                                            
 % Using saving option full requires: 1) ghoscript and 2) pdftops
+%  https://github.com/altmany/export_fig
 %  http://www.ghostscript.com
 %  http://xpdfreader.com
 
@@ -81,7 +83,6 @@ toc
 
 %% Plot the optimum solution
 close all
-clc
 turbine_data = AxialOpt_model_turbine(x_opt,parameters_turbine);
 AxialOpt_plot(turbine_data,choose_plots,my_filename,my_figures_path);
 
