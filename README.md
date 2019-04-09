@@ -75,10 +75,8 @@ Please drop us an email to [roberto.agromayor@ntnu.no](mailto:roberto.agromayor@
 
 
 ## How to cite AxialOpt?
-If you want to cite AxialOpt in a scientific publication, please refer to the DOI of the Zenodo repository:
+If you want to cite AxialOpt in a scientific publication, please refer to the [Zenodo repository](#2) using its DOI (permanent link)
 
-R. Agromayor and L. O. Nord, AxialOpt - A Meanline Model for the Design and Optimization of Axial Turbines.  
-Zenodo Repository. DOI: https://doi.org/10.5281/zenodo.2616406
 
 
 ## References
@@ -88,7 +86,7 @@ R. Agromayor and L. O. Nord, Preliminary Design and Optimization of Axial Turbin
 [![DOI Preliminary_Design_and_Optimization_of_Axial_Turbines_Accounting_for_Diffuser_Performance](https://img.shields.io/badge/DOI-Preliminary_Design_and_Optimization_of_Axial_Turbines_Accounting_for_Diffuser_Performance-blue.svg)](https://www.google.com/)
 
 <a name="2"></a>
-R. Agromayor, and L. O. Nord, AxialOpt - A Mean-Line Model for the Design and Optimization of Axial Turbines, Zenodo repository, 2019
+R. Agromayor, and L. O. Nord, AxialOpt - A Meanline Model for the Design and Optimization of Axial Turbines, Zenodo repository.
 
 [![DOI AxialOpt_Zenodo_repository](https://img.shields.io/badge/DOI-AxialOpt_Zenodo_repository-blue.svg)](https://doi.org/10.5281/zenodo.2616406)
 
