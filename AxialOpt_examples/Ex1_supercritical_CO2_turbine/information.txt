@@ -3,7 +3,7 @@ AxialOpt examples – Supercritical Carbon Dioxide turbine
 This example uses the thermodynamic boundary conditions for a turbine using carbon dioxide as working fluid
 
 The data was obtained from the textbook example:
-Dostal (2014). A Supercritical Carbon Dioxide Cycle for Next Generation Nuclear Reactors. PhD thesis. pAGES 227-228
+Dostal (2014). A Supercritical Carbon Dioxide Cycle for Next Generation Nuclear Reactors. PhD thesis. Pages 227-228
 
 Thermodynamic data:
 Number of stages                        1
