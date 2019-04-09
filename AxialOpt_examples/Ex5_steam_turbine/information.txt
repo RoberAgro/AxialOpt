@@ -1,0 +1,17 @@
+AxialOpt examples – High pressure steam turbine
+
+This example uses the thermodynamic boundary conditions for a 4-stage turbine using steam as working fluid
+
+The data was obtained from the textbook example:
+Moran and Shapiro(2011). Fundamentals of Engineering Thermodynamics 7th Edition. Page 449
+
+Thermodynamic data:
+Working fluid	                    Water
+Inlet stagnation temperature	480 C
+Inlet stagnation pressure	80 bar
+Outlet static pressure	7 bar
+Mass flow rate      	65.64 kg/s
+
+Observations:
+This case corresponds to the high-pressure turbine of a steam power cycle with reheating
+High-pressure steam turbines are characterized by short, shrouded blades with high hub-to-tip ratios whereas low-pressure steam turbines are characterized by long, unshrouded blades with low hub-to-tip ratios
