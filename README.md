@@ -78,6 +78,9 @@ Please drop us an email to [roberto.agromayor@ntnu.no](mailto:roberto.agromayor@
 Please use the DOI of the Zenodo repository if you want to cite AxialOpt in a scientific publication.
 complete this later
 
+R. Agromayor and L. O. Nord, AxialOpt - A Meanline Model for the Design and Optimization of Axial Turbines. Zenodo Repository. DOI: https://doi.org/10.5281/zenodo.2616406
+
+
 ## References
 <a name="1"></a>
 R. Agromayor and L. O. Nord, Preliminary Design and Optimization of Axial Turbines Accounting for Diffuser Performance, International Journal of Turbomachinery, Propulsion and Power (submitted).
