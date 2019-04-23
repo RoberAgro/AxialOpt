@@ -89,7 +89,7 @@ R. Agromayor and L. O. Nord, Preliminary Design and Optimization of Axial Turbin
 
 R. Agromayor, and L. O. Nord, AxialOpt - A Meanline Model for the Design and Optimization of Axial Turbines, Zenodo repository.
 
-[![DOI AxialOpt_Zenodo_repository](https://img.shields.io/badge/DOI-AxialOpt_Zenodo_repository-blue.svg)](https://doi.org/10.5281/zenodo.2616406)
+[![DOI AxialOpt_Zenodo_repository](https://img.shields.io/badge/DOI-AxialOpt_Zenodo_repository-blue.svg)](https://doi.org/10.5281/zenodo.2635586)
 
 
 E. W. Lemmon, M. L. Huber, and M. O. McLinden, NIST Standard Reference Database 23: Reference Fluid Thermodynamic and Transport Properties (REFPROP) version 9.1, National Institute of Standards and Technology, 2013.
