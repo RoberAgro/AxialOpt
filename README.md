@@ -77,7 +77,7 @@ Please, drop us an email to [roberto.agromayor@ntnu.no](mailto:roberto.agromayor
 
 ## How to cite AxialOpt?
 If you want to cite AxialOpt in a scientific publication, please refer to the [Zenodo repository](https://doi.org/10.5281/zenodo.2616406) listed in the references below.  
-DOI: https://doi.org/10.5281/zenodo.2616406
+DOI: https://doi.org/10.5281/zenodo.2635586
 
 
 ## References
