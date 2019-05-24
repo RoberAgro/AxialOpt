@@ -1,7 +1,7 @@
 # AxialOpt
 AxialOpt is a code for the preliminary design and optimization of axial turbines. The output of AxialOpt can be used in system-level analyses (such as a power cycle optimization) to estimate the efficiency or footprint of axial turbines for a given set of thermodynamic specifications. In addition, the information provided by AxialOpt can be used as the starting point for the aerodynamic design of the turbine blades using more advanced flow models based on CFD.
 
-The models and optimization methodology of AxialOpt are documented in a peer-reviewed, [open-access publication](https://www.google.com) and the source code is also stored in a [Zenodo repository](https://doi.org/10.5281/zenodo.2635586).
+The models and optimization methodology of AxialOpt are documented in a peer-reviewed, [open-access publication](https://www.google.com) (submitted) and the source code is also stored in a [Zenodo repository](https://doi.org/10.5281/zenodo.2635586).
 
 
 ## Features
