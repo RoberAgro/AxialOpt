@@ -1,123 +1,114 @@
 # AxialOpt
-AxialOpt is a code for the preliminary design and optimization of axial turbines. The output of AxialOpt can be used in system-level analyses (such as a power cycle optimization) to estimate the efficiency or footprint of axial turbines for a given set of thermodynamic specifications. In addition, the information provided by AxialOpt can be used as the starting point for the aerodynamic design of the turbine blades using more advanced flow models based on CFD.
+## Description
 
-The models and optimization methodology of AxialOpt are documented in a peer-reviewed, [open-access publication](https://doi.org/10.3390/ijtpp4030032) and the source code is also stored in a [Zenodo repository](https://doi.org/10.5281/zenodo.2635586).
+`AxialOpt` is a MATLAB tool for the mean-line design optimization of axial turbines.  The code was developed aiming at simplicity and ease of use. Some of the notable features of the code are listed below:
 
+- Supports the design optimization of axial turbines with any number of stages.
+- Supports several loss models to estimate the entropy generation within the turbine, including:
+  - [Ainley and Mathieson](https://apps.dtic.mil/dtic/tr/fulltext/u2/a950664.pdf) (1951)
+  - [Dunhan and Came](http://dx.doi.org/10.1115/1.3445349) (1970)
+  - [Kacker and Okapuu](http://dx.doi.org/10.1115/1.3227240) (1982)
+- Uses a one-dimensional diffuser model or a simplified isentropic flow model to compute the fraction of kinetic energy recovered at the exit of the turbine.
+- Supports a wide range of working fluids, such as air, water, carbon dioxide, hydrocarbons, and refrigerants.
+- Uses the equations of state of the [CoolProp](http://www.coolprop.org/) library to compute the thermodynamic properties of the working fluid.
+- Uses the gradient-based algorithms of the [MATLAB Optimization Toolbox](https://se.mathworks.com/products/optimization.html) to find the optimal turbine configuration in a systematic way. 
+- Offers plotting capabilities to visualize the geometry, thermodynamic diagrams, velocity triangles, and loss distribution of the designed turbines.
+- Offers the possibility to export publication-quality plots by means of the [export_fig](https://github.com/altmany/export_fig) toolbox. Using this toolbox requires [ghostcript](https://www.ghostscript.com/) and [pdftops](http://www.xpdfreader.com/). See the installation instructions in the original repository.
 
-## Features
+_Note: AxialOpt is not suited to estimate the performance of an existing turbine design under different operating conditions._
 
-* The axial turbine model is composed of three sub-models that are used as building blocks:
-  1. A meanline model to describe the flow in each cascade
-  2. An empirical loss model to evaluate the entropy generation in each cascade
-  3. A [one-dimensional flow diffuser model](https://github.com/RoberAgro/AnnularDiffuser1D) to compute the exit kinetic energy recovery
-* The model is formulated for axial turbines with any number of stages
-* The model is formulated to use arbitrary equations of state to compute thermodynamic properties:
-  1. The current version uses the [REFPROP v9.1](https://dx.doi.org/10.18434/T4JS3C) fluid library
-  2. Other fluid libraries and look-up tables may be implemented in the future
-* The loss model is formulated in a general way to use:
-  1. Any set of empirical correlations to compute the losses:
-      1. [Ainley and Mathieson](#1) (implemented)
-      2. [Dunhan and Came](#2) (implemented)
-      3. [Kacker and Okapuu](#3)(implemented)
-      4. [Craig and Cox](#4) (will be implemented soon)
-      5. Other loss model contributions are welcome
-  2. Different definitions for the loss coefficient:
-      1. Stagnation pressure loss coefficient
-      2. Enthalpy loss coefficient (also known as kinetic energy loss coefficient)
-      3. Entropy loss coefficient
-* The preliminary design is formulated as a constrained optimization problem
-  1. This allows explore the design space in a systematic way and account for technical constraints
-  2. It is straighforward to modify the objective function and constraints depending on the problem
-  3. There are several gradient-based algorithms available to solve the optimization problem, including:
-      1. Sequential Quadratic Programming (SQP)
-      2. Interior Point (IP)
-* The output of AxialOpt can be saved as:
-  1. Data files:
-      1. Summary of the solution of the optimization problem
-      2. Geometry of each cascade
-      3. Thermodynamic properties at each station
-      4. Velocity triangles of each stage
-  2. Figures:
-      1. T-s and h-s diagrams of the expansion
-      2. Velocity triangles of each stage
-      3. Axial-radial and axial-tangential views of the turbine
-      4. Breakdown of the losses within the turbine
-  
-_Note: AxialOpt is not suitable to estimate the performance of an existing design under different conditions. The extension of the code to compute the performance at off-design conditions is underway._
+<figure>
+	<img src="./docs/axial_turbine_diagrams.svg" width="750"/> 
+</figure>
 
+## Installation
+In order to use `AxialOpt` you need a MATLAB installation and the MATLAB Optimization Toolbox. In addition you need to install CoolProp and interface it with MATLAB through Python. This may sound complicated, but it is not!
 
+Check the step-by-step instructions below to learn how to interface MATLAB with CoolProp in a Windows operating system. The installation for Linux or Mac operating systems would be similar.
 
-## Requisites
-AxialOpt was implemented in [MATLAB R2018a](https://nl.mathworks.com/) and requires a [REFPROP v9.1](https://dx.doi.org/10.18434/T4JS3C) installation. The folder [link_refprop_matlab](link_refprop_matlab) contains instructions about how to link REFPROP with MATLAB.
+#### Step 1 - Download and install Miniconda
 
-AxialOpt has the option to use the [export_fig library](https://github.com/altmany/export_fig) to produce publication-quality figures. Using this library requires _ghostcript_ and _pdftops_. See the installation instructions in the [original repository](https://github.com/altmany/export_fig).
+Download the [Miniconda](https://docs.conda.io/en/latest/miniconda.html) environment management system and follow the installation instructions.
 
+#### Step 2 - Create a virtual environment and install CoolProp
 
+Open a Miniconda terminal (look for "Anaconda Prompt" or "Miniconda3"). Once the terminal is open, type the following command to create a new virtual environment named `coolprop_env`:
 
-## Examples
-The folder [AxialOpt_examples](AxialOpt_examples) contains five examples commented in detail to get started with the code:
-  * A supercritical Carbon dioxide turbine
-  * A organic Rankine cycle (ORC) turbine using R125 as working fluid
-  * A organic Rankine cycle (ORC) turbine using hexane as working fluid
-  * An industrial gas turbine
-  * A high-pressure steam turbine
-  
-These examples show the capabilities AxialOpt and they can be used as a template to start your own projects.
+```shell
+conda create --name coolprop_env python=3.8
+```
 
+Don't worry if you are not familiar with the command window or with virtual environments, you only have to type two more commands before the installation is complete. Now that the environment is created, you can activate it. Just use the following command:
+
+```shell
+conda activate coolprop_env
+```
+
+Finally, type the following command to install CoolProp:
+
+```shell
+conda install CoolProp --channel conda-forge
+```
+
+That's it! Note that it was necessary to tell Miniconda that it should look for Coolprop in the `conda-forge` channel.
+
+#### Step 3 - Interface MATLAB and Coolprop
+
+Open MATLAB (or close and open it if it was already open) and type the following command to let MATLAB know where is the Python executable (python.exe) of the virtual environment that you have just created:
+
+```matlab
+pyversion C:\Users\rober\.conda\envs\coolprop_env\python.exe
+```
+
+Note that, in my case, the executable was located at `C:\Users\rober\.conda\envs\coolprop_env\`. You should replace this part with the correct path in your computer.
+
+Good! You have installed CoolProp and interfaced it with MATLAB. Let's do a simple test to check if the installation was successful. We are going to use CoolProp to compute the saturation temperature of water at atmospheric pressure. Just type the following command in MATLAB: 
+
+```matlab
+py.CoolProp.CoolProp.PropsSI('T','P',101325,'Q',0,'Water')
+```
+
+If it does not throw and error and returns 373.1243 K, the installation was successful.
+
+## Getting started
+
+The best way to learn how to use `AxialOpt` is to open one of the [examples](examples/) and start playing around with the different parameters and settings. The examples have plenty of comments to guide the users and help them understand how the code works
+
+## Mathematical background
+
+Check out [our paper](https://doi.org/10.3390/ijtpp4030032) if you want to learn more about the optimization problem formulation and mathematical modeling behind `AxialOpt`.
 
 ## License
-AxialOpt is licensed under the terms of the MIT license. See the [license file](LICENSE.md) for more information.
+
+`AxialOpt` is licensed under the terms of the MIT license. See the [license file](LICENSE.md) for more information.
 
 
 ## Contact information
-AxialOpt was developed by PhD candidate [Roberto Agromayor](https://www.ntnu.edu/employees/roberto.agromayor) and Associate Professor [Lars O. Nord](https://www.ntnu.edu/employees/lars.nord) at the [Process and Power Research Group](https://www.ntnu.edu/ept/process-power#/view/about) of the [Norwegian University of Science and Technology (NTNU)](https://www.ntnu.no/)
-
-Please, drop us an email to [roberto.agromayor@ntnu.no](mailto:roberto.agromayor@ntnu.no) if you have questions about the code or you have a bug to report. We would also love to hear about your experiences with AxialOpt in general.
+`AxialOpt` was developed by [Roberto Agromayor](https://www.ntnu.edu/employees/roberto.agromayor) and of [Lars O. Nord](https://www.ntnu.edu/employees/lars.nord) at the [Norwegian University of Science and Technology (NTNU)](https://www.ntnu.no/). Drop us an email to [roberto.agromayor@ntnu.no](mailto:roberto.agromayor@ntnu.no) if you have questions about the code or you have a bug to report!
 
 
-## How to cite AxialOpt?
-If you want to cite AxialOpt in a scientific publication, please refer to the [Zenodo repository](https://doi.org/10.5281/zenodo.2616406) listed in the references below.  
-DOI: https://doi.org/10.5281/zenodo.2635586
+## How to cite?
+You can use the following BibTeX entries if you want to cite `AxialOpt` in your work:
 
+```bibtex
+@misc{axialopt_v2.0,
+    author = {},
+    title = {{AxialOpt v2.0}},
+    year = {2021},
+    doi = {https://doi.org/10.5281/zenodo.2635586},
+}
+```
+```bibtex
+@article{Agromayor2019,
+    title = {{Preliminary Design and Optimization of Axial Turbines Accounting for Diffuser Performance}},
+    author = {Agromayor, Roberto and Nord, Lars O},
+    journal = {International Journal of Turbomachinery, Propulsion and Power},
+    volume = {4},
+    number = {3},
+    pages = {1--32},
+    year = {2019},
+    doi = {https://doi.org/10.3390/ijtpp4030032}
+}
+```
 
-## References
-
-R. Agromayor and L. O. Nord, Preliminary Design and Optimization of Axial Turbines Accounting for Diffuser Performance, International Journal of Turbomachinery, Propulsion and Power (submitted).
-
-[![DOI Preliminary_Design_and_Optimization_of_Axial_Turbines_Accounting_for_Diffuser_Performance](https://img.shields.io/badge/DOI-Preliminary_Design_and_Optimization_of_Axial_Turbines_Accounting_for_Diffuser_Performance-blue.svg)](https://www.google.com/)
-
-
-R. Agromayor, and L. O. Nord, AxialOpt - A Meanline Model for the Design and Optimization of Axial Turbines, Zenodo repository.
-
-[![DOI AxialOpt_Zenodo_repository](https://img.shields.io/badge/DOI-AxialOpt_Zenodo_repository-blue.svg)](https://doi.org/10.5281/zenodo.2635586)
-
-
-E. W. Lemmon, M. L. Huber, and M. O. McLinden, NIST Standard Reference Database 23: Reference Fluid Thermodynamic and Transport Properties (REFPROP) version 9.1, National Institute of Standards and Technology, 2013.
-
-[![DOI REFPROP_fluid_library](https://img.shields.io/badge/DOI-REFPROP_fluid_library-blue.svg)](https://dx.doi.org/10.18434/T4JS3C)
-
-
-
-<a name="1"></a>
-Ainley, D.G.; Mathieson, C.R. A Method of Performance Estimation for Axial-Flow Turbines. Aeronautical Research Council Reports and Memoranda 1951, 2974, 1–30.
-
-[![URL Ainley_and_Mathieson_loss_model_(1951)](https://img.shields.io/badge/DOI-Ainley_and_Mathieson_loss_model_(1951)-blue.svg)](https://apps.dtic.mil/dtic/tr/fulltext/u2/a950664.pdf)
-
-
-<a name="2"></a>
-Dunham, J.; Came, P.M. Improvements to the Ainley-Mathieson Method of Turbine Performance Prediction. Journal of Engineering for Power 1970, 92, 252–256.
-
-[![DOI Dunham_and_Came_loss_model_(1970)](https://img.shields.io/badge/DOI-Dunham_and_Came_loss_model_(1970)-blue.svg)](http://dx.doi.org/10.1115/1.3445349)
-
-
-<a name="3"></a>
-Kacker, S.C.; Okapuu, U. A Mean Line Prediction Method for Axial Flow Turbine Efficiency. Journal of Engineering for Power 1982, 104, 111–119.
-
-[![DOI Kacker_and_Okapuu_loss_model_(1982)](https://img.shields.io/badge/DOI-Kacker_and_Okapuu_loss_model_(1982)-blue.svg)](http://dx.doi.org/10.1115/1.3227240)
-
-
-<a name="4"></a>
-Craig, H.R.M.; Cox, H.J.A. Performance Estimation of Axial Flow Turbines. Proceedings of the Institution of Mechanical Engineers 1970, 185, 407–424.
-
-[![DOI Craig_and_Cox_loss_model_(1970)](https://img.shields.io/badge/DOI-Craig_and_Cox_loss_model_(1970)-blue.svg)](https://doi.org/10.1243/PIME_PROC_1970_185_048_02)
 
