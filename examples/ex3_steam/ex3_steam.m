@@ -43,7 +43,7 @@ loss_coefficient = 'p0';
 
 % Define the objective function
 % Set 'total-to-static' or 'total-to-total'
-obj_function = 'total-to-total';
+obj_function = 'total-to-static';
 
 % Define the number of stages
 n_stages = 1;
@@ -54,7 +54,7 @@ fluid = 'HEOS::WATER';
 % Define the thermodynamic specifications of the design problem
 % These are usually obtained from a system-level analysis
 % Specify inlet enthalpy if the expansion starts from the two-phase region
-T0_in = 420.00;                                                            % Inlet stagnation temperature in (K)
+T0_in = 450.00;                                                            % Inlet stagnation temperature in (K)
 p0_in = 0.335e5;                                                           % Inlet stagnation pressure in (Pa)
 h0_in = prop_calculation('H','T',T0_in,'P',p0_in,fluid);
 p_out = 0.067e5;                                                           % Outlet static pressure in (Pa)
@@ -99,7 +99,7 @@ d_s_min = 0.01;                                                            % The
 d_s_max = 10.0;                                                            % The range 0.01-10.0 covers almost all cases
 
 % Reduced velocity at the inlet of the first stator
-vel_in = 0.15;                                                             % Inlet velocity scaled by the spouting velocity
+vel_in = 0.10;                                                             % Inlet velocity scaled by the spouting velocity
 vel_in_min = 0.001;                                                        % The reduced velocity is positive
 vel_in_max = 0.500;                                                        % The reduced velocity is lower than 1.00
 

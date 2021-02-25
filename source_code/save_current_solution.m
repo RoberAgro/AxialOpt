@@ -11,7 +11,7 @@ iter = iter+1;
 turbine_data = evaluate_turbine_model(x,fixed_parameters);
 
 % Save the current solution as a MATLAB data structure
-save(fullfile(fixed_parameters.results_path,[fixed_parameters.project_name, '_iter', num2str(iter), '.mat']),'turbine_data')
+save(fullfile(fixed_parameters.results_path,[fixed_parameters.project_name, '_', num2str(iter,'%02d'), '.mat']),'turbine_data')
 
 % Return a false stop flag
 stop = false;

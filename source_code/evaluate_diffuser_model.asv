@@ -33,6 +33,8 @@ h0_in = turbine_data.plane(k).h0;
 s_in = turbine_data.plane(k).s;
 mass_flow = turbine_data.overall.mass_flow;
 
+d0_in = prop_calculation('D','P',p0_in,'S',s_in,fluid);
+
 % Inlet velocity
 v_m_in = turbine_data.plane(k).v_m;
 v_t_in = turbine_data.plane(k).v_t;
@@ -69,7 +71,7 @@ if strcmp(diffuser_model, 'isentropic')
     
     % Compute the exit density
     options = optimset('TolX',1e-6);
-    d_out = fzero(@compute_energy_balance_error, [0.50*d_in, 4.00*d_in], options);
+    d_out = fzero(@compute_energy_balance_error, [0.50*d_in, 1.50*d0_in], options);
 
     % Compute the exit state
     p_out = prop_calculation('P','D',d_out,'S',s_in,fluid);
