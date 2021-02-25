@@ -79,8 +79,7 @@ The best way to learn how to use `AxialOpt` is to open one of the [examples](exa
 
 Check out our papers if you want to learn more about the optimization problem formulation and mathematical modeling behind `AxialOpt`:
 
-- R. Agromayor and L. O. Nord (2019). [Preliminary Design and Optimization of Axial Turbines Accounting for Diffuser Performance](https://doi.org/
-  10.3390/ijtpp4030032). *International Journal of Turbomachinery, Propulsion and Power* 4.3, pp. 1-32.
+- R. Agromayor and L. O. Nord (2019). [Preliminary Design and Optimization of Axial Turbines Accounting for Diffuser Performance](https://doi.org/10.3390/ijtpp4030032). *International Journal of Turbomachinery, Propulsion and Power* 4.3, pp. 1-32.
 - R. Agromayor, B. Müller, and L. O. Nord (2019). [One-Dimensional Annular Diffuser Model for Preliminary Turbomachinery Design](https://doi.org/10.3390/ijtpp4030031). *International Journal of Turbomachinery, Propulsion and Power* 4.3, pp. 1-31. 
 
 ## License
