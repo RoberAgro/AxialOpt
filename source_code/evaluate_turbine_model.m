@@ -288,7 +288,7 @@ end
 % disp(1-sum(sum(loss_matrix))-eta_ts)
 
 
-%% Prepare a structure to summarize the bounds
+%% Prepare a structure to summarize the optimization problem variables
 % Initialize cells
 header    = {};
 name      = {};
@@ -366,7 +366,7 @@ bounds_summary.value_max = num2cell(value_max);
 bounds_summary.active    = active;
 bounds_summary.satisfied = satisfied;
 
-% Put information into turbine_data structure
+% Store the optimization information into turbine_data structure
 turbine_data.optimization.x = x;
 turbine_data.optimization.lb = value_min;
 turbine_data.optimization.ub = value_max;
