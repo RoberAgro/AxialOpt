@@ -89,43 +89,48 @@ Cf = 0.010;                                                                % Ski
 
 %% Define the independent variables and bounds
 % Specific speed
-w_s = 1.00;                                                                % Easier to guess than the angular speed
-w_s_min = 0.01;                                                            % The range 0.01-10.0 covers almost all cases
-w_s_max = 10.0;                                                            % This range can be extended if desired
+w_s = 1.00;                                                                % Easier to guess than the angular speed (scale independent)
+w_s_min = 0.01;                                                            % The relation d_s*w_s = 2/sqrt(n_stages) gives good results
+w_s_max = 10.0;                                                            % The range 0.01-10.0 covers almost all cases
 
 % Specific diameter
-d_s = 2/sqrt(n_stages)/w_s;                                                % Easier to guess than the actual diameter. Setting 2/sqrt(n_stages)/w_s gives good results
-d_s_min = 0.01;                                                            % The range 0.1-10.0 covers almost all cases
-d_s_max = 10.0;                                                            % This range can be extended if desired
+d_s = 2/sqrt(n_stages)/w_s;                                                % Easier to guess than the actual diameter (scale independent)
+d_s_min = 0.01;                                                            % The relation d_s*w_s = 2/sqrt(n_stages) gives good results
+d_s_max = 10.0;                                                            % The range 0.01-10.0 covers almost all cases
 
 % Reduced velocity at the inlet of the first stator
-vel_in = 0.15;
+vel_in = 0.15;                                                             % Inlet velocity scaled by the spouting velocity
 vel_in_min = 0.001;                                                        % The reduced velocity is positive
 vel_in_max = 0.500;                                                        % The reduced velocity is lower than 1.00
 
 % Reduced relative velocity at the outlet of each cascade
 vel_out(1:2:2*n_stages-1) = 1/sqrt(2*n_stages);                            % Reduced relative velocity at the outlet of the stators. 1/sqrt(2*n_stages); is a good initial guess
 vel_out(2:2:2*n_stages)   = 1/sqrt(2*n_stages);                            % Reduced relative velocity at the outlet of the rotors. 1/sqrt(2*n_stages); is a good initial guess
-vel_out_min(1:2*n_stages) = 0.05;                                          % The reduced velocity is positive
-vel_out_max(1:2*n_stages) = 1.25;                                          % The reduced velocity is lower than 1.00
+vel_out_min(1:2*n_stages) = 0.05;                                          % The reduced velocity must be higher than zero
+vel_out_max(1:2*n_stages) = 1.25;                                          % The reduced velocity must be lower than unity
 
 % Relative angle at the outlet of each cascade
-ang_out(1:2:2*n_stages-1) = +70/180*pi;                                    % Relative angle at the outlet of each stator
-ang_out(2:2:2*n_stages)   = -70/180*pi;                                    % Relative angle at the outlet of each rotor
-ang_out_min(1:2:2*n_stages-1) = +40/180*pi;                                % The low limit of the Ainley-Mathieson profile loss correlation for the relative angle at the outlet of the stator is +40 deg (tricky sign convention)
-ang_out_min(2:2:2*n_stages)   = -80/180*pi;                                % The low limit of the Ainley-Mathieson profile loss correlation for the relative angle at the outlet of the rotor is -80 deg (tricky sign convention)
-ang_out_max(1:2:2*n_stages-1) = +80/180*pi;                                % The high limit of the Ainley-Mathieson profile loss correlation for the relative angle at the outlet of the stator is +80 deg (tricky sign convention)
-ang_out_max(2:2:2*n_stages)   = -40/180*pi;                                % The high limit of the Ainley-Mathieson profile loss correlation for the relative angle at the outlet of the rotor is -40 deg (tricky sign convention)
+ang_out(1:2:2*n_stages-1) = +70/180*pi;                                    % Relative angle at the outlet of each stator (rad)
+ang_out(2:2:2*n_stages)   = -70/180*pi;                                    % Relative angle at the outlet of each rotor (rad)
+ang_out_min(1:2:2*n_stages-1) = +40/180*pi;                                % The lower limit for this variable in the Ainley-Mathieson loss system is +40 deg (tricky sign convention)
+ang_out_min(2:2:2*n_stages)   = -80/180*pi;                                % The lower limit for this variable in the Ainley-Mathieson loss system is -80 deg (tricky sign convention)
+ang_out_max(1:2:2*n_stages-1) = +80/180*pi;                                % The upper limit for this variable in the Ainley-Mathieson loss system is +80 deg (tricky sign convention)
+ang_out_max(2:2:2*n_stages)   = -40/180*pi;                                % The upper limit for this variable in the Ainley-Mathieson loss system is -40 deg (tricky sign convention)
 
 % Aspect ratio
-r_Hc(1:2*n_stages) = 1.25;                                                 % Blade height to actual chord aspect ratio (not axial chord)
+r_Hc(1:2*n_stages) = 1.25;                                                 % Ratio of the mean blade height to the actual chord (not axial chord)
 r_Hc_min(1:2*n_stages) = 1.00;                                             % Saravanamuttoo advises against aspect ratios lower than 1.00
-r_Hc_max(1:2*n_stages) = 2.00;                                             % Saravanamuttoo indicates that high values may leed to vibration problems. Values around 3.00-4.00 are safe
+r_Hc_max(1:2*n_stages) = 2.00;                                             % Saravanamuttoo indicates that high values may leed to vibration problems and that values around 3.00-4.00 are safe
 
 % Pitch to chord ratio
-r_sc(1:2*n_stages) = 0.75;                                                 % Spacing to chord ratio (inverse of solidity in US terminology)
-r_sc_min(1:2*n_stages) = 0.30;                                             % The low limit of the Ainley-Mathieson profile loss correlation for the pitch to chord ratio is 0.30                              
-r_sc_max(1:2*n_stages) = 1.10;                                             % The high limit of the Ainley-Mathieson profile loss correlation for the pitch to chord ratio is 1.10                             
+r_sc(1:2*n_stages) = 0.75;                                                 % Ratio of the blade spacing to actual chord (inverse of solidity in US terminology)
+r_sc_min(1:2*n_stages) = 0.30;                                             % The lower limit for this variable in the Ainley-Mathieson loss system is 0.30                              
+r_sc_max(1:2*n_stages) = 1.10;                                             % The upper limit for this variable in the Ainley-Mathieson loss system is 1.10                             
+
+% Trailing edge to opening ratio
+r_to(1:2*n_stages) = 0.10;                                                 % Ratio of the trailing edge thickness to the cascade opening
+r_to_min(1:2*n_stages) = 0.05;                                             % The lower limit for this variable in the Kacker-Okapuu loss system is 0.0         
+r_to_max(1:2*n_stages) = 0.40;                                             % The upper limit for this variable in the Kacker-Okapuu loss system is 0.4                                
 
 % Entropy at the outlet of each cascade
 % Initial guess: compute the exit entropy for a reference isentropic
@@ -143,10 +148,10 @@ s_out_max(1:2*n_stages) = 2.00;
 
 %% Define the constraints
 % Instructions:
-% 1. Specify the minimum and maximum values
-% 2. Specify whether to apply the constraint or not
-% 3. Specify a reference value to scale the problem 
-% 4. Use [brackets] to ignore the constraint value
+%  1. Specify the minimum and maximum values
+%  2. Specify whether to apply the constraint or not
+%  3. Specify a reference value to scale the problem 
+%  4. Use [brackets] to ignore the constraint value
 
 % Flaring angle
 constraints.flare_angle.min = -10*pi/180;                                  % Ainley and Mathieson (March 1951) recommend a maximum of 12.5 deg
@@ -202,6 +207,12 @@ constraints.chord.max = [];
 constraints.chord.applied = 'no';
 constraints.chord.ref = 0.01;
 
+% Minimum trailing edge thickness constraint
+constraints.thickness_te.min = 5e-4;                                       % Insert any value in [m]
+constraints.thickness_te.max = [];
+constraints.thickness_te.applied = 'no';
+constraints.thickness_te.ref = 1e-3;
+
 % Angular speed constraint
 constraints.RPM.min = 3600;                                                % Insert any value in [rpm]
 constraints.RPM.max = 3600;                                                % 3000 or 3600 for syncronous speed in Europe or USA, respectively
@@ -209,8 +220,8 @@ constraints.RPM.applied = 'no';
 constraints.RPM.ref = 10000;
 
 % In order to add new constraints you have to:
-%    1. Add the desired constraint in this section of the code
-%    2. Modify the function evaluate_constraints() in the source code
+%  1. Add the desired constraint in this section of the code
+%  2. Modify the function evaluate_constraints() in the source code
 
 
 %% Define optimization algorithm settings
@@ -274,8 +285,6 @@ In order to use save=2 it is necessary to install 'ghostscript'
   http://xpdfreader.com
 
 %}
-
-% TODO update saving options
 
 
 %% Store the parameters defined up to this point into data structures

@@ -45,7 +45,8 @@ vel_out = x(4+0*n_cascades:4+1*n_cascades-1)*v_0;
 ang_out = x(4+1*n_cascades:4+2*n_cascades-1);
 r_Hc    = x(4+2*n_cascades:4+3*n_cascades-1);
 r_sc    = x(4+3*n_cascades:4+4*n_cascades-1);
-s_out   = x(4+4*n_cascades:4+5*n_cascades-1)*s_in;
+r_to    = x(4+4*n_cascades:4+5*n_cascades-1);
+s_out   = x(4+5*n_cascades:4+6*n_cascades-1)*s_in;
 
 
 %% Compute the mean radius and the angular speed
@@ -94,6 +95,7 @@ for k = 1:n_cascades
                  ang_out(k), ...
                  r_Hc(k), ...
                  r_sc(k), ...
+                 r_to(k), ...
                  s_out(k)]';
 
     % Compute the velocity triangles, thermodynamic properties and
@@ -307,10 +309,11 @@ k = 1;
 name(k) = {'Specific speed'};    k = k + 1;
 name(k) = {'Specific diameter'}; k = k + 1;
 name(k) = {'Inlet velocity'};    k = k + 1;
-name(k:k+n_cascades-1) = {'Outlet velocity'};   k = k+n_cascades;
-name(k:k+n_cascades-1) = {'Exit flow angle'};   k = k+n_cascades;
-name(k:k+n_cascades-1) = {'Aspect ratio'};      k = k+n_cascades;
-name(k:k+n_cascades-1) = {'Pitch-chord ratio'}; k = k+n_cascades;
+name(k:k+n_cascades-1) = {'Outlet velocity'};        k = k+n_cascades;
+name(k:k+n_cascades-1) = {'Exit flow angle'};        k = k+n_cascades;
+name(k:k+n_cascades-1) = {'Aspect ratio'};           k = k+n_cascades;
+name(k:k+n_cascades-1) = {'Pitch-chord ratio'};      k = k+n_cascades;
+name(k:k+n_cascades-1) = {'Trailing-opening ratio'}; k = k+n_cascades;
 name(k:k+n_cascades-1) = {'Outlet entropy'};
 
 % Define the lower bounds
@@ -321,6 +324,7 @@ value_min = [fixed_parameters.lower_bounds.w_s,     ...
              fixed_parameters.lower_bounds.ang_out, ...
              fixed_parameters.lower_bounds.r_Hc,    ...
              fixed_parameters.lower_bounds.r_sc,    ...
+             fixed_parameters.lower_bounds.r_to,    ...
              fixed_parameters.lower_bounds.s_out];
           
 % Define the upper bounds
@@ -331,6 +335,7 @@ value_max = [fixed_parameters.upper_bounds.w_s,     ...
              fixed_parameters.upper_bounds.ang_out, ...
              fixed_parameters.upper_bounds.r_Hc,    ...
              fixed_parameters.upper_bounds.r_sc,    ...
+             fixed_parameters.upper_bounds.r_to,    ...
              fixed_parameters.upper_bounds.s_out];
                       
 % Check if the bounds are satisfied

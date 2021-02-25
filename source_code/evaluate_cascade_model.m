@@ -20,7 +20,8 @@ vel_out   = x_cascade(1);
 angle_out = x_cascade(2);
 r_Hc      = x_cascade(3);
 r_sc      = x_cascade(4);
-s_out     = x_cascade(5);
+r_to      = x_cascade(5);
+s_out     = x_cascade(6);
 
 
 %% Rename the fixed variables for convenience
@@ -185,8 +186,8 @@ H        = (H_in+H_out)/2;                                                 % Mea
 c        = (1/r_Hc)*H;                                                     % Chord
 s        = r_sc*c;                                                         % Spacing
 o        = s*cos(beta_out);                                                % Opening
+t_te     = o*r_to;                                                         % Trailing edge thickness
 t_max    = evaluate_thickness_correlation(abs(theta_in-theta_out),c);      % Maximum thickness
-t_te     = o/10;                                                           % Trailing edge thickness (Macchi 1981 use 0.1. Seems reasonable based on Kacker-Okapuu correlation. Ainley Mathieson proposed 0.02*s)
 t_cl     = turbine_data.overall.t_cl;                                      % Tip and shroud clearance (Luca Da Lio 2016 suggest 0.5 mm or is it 0.2 mm?)
 stagger  = (theta_in+theta_out)/2;                                         % Stagger angle (circular arc blades)
 b        = c*cos(stagger);                                                 % Axial chord
@@ -194,36 +195,23 @@ delta_fl = atan((H_out-H_in)/(2*b));                                       % Fla
 cs       = 0.40*b;                                                         % Axial spacing after the cascade
 z        = 2*pi*radius/s;                                                  % Number of blades
 Re       = d_out*w_out*c/mu_out;                                           % Reynolds number (evaluated at the outlet of the stage)
-% stagger  = 0.90*geometry_correlation_stagger(beta_in,beta_out,type);     % Stagger angle correlation proposed by Okapuu
+% stagger  = evaluate_stagger_correlation(beta_in,beta_out,type);          % Stagger angle correlation proposed by Okapuu
 % cs       = max(1.5*o,0.3*b);
-% t_te     = max([0.02*s,L_min]);                                          % Trailing edge thickness
-% t_cl     = max(H/100,t_cl);                                        % Tip and shroud clearance (no reference yet)
-
 
 % Some comments:
 %{
 
-The opening is computed with an approximate relation (can be found in
-Dixon or other texbooks. Other authors propose correlationss that would
-give more approximate values. These correlations could be added in the
-future. 1) Ainley and Mathieson 2) Aungier
+The opening is computed using the cosine rule
 
-The trailing edge thickness is computed with the rule o=0.02s proposed in
-several papers including the one from Kacker and Okappu
-
-Saravanamutto recommends ss=(0.25-0.50)b for the spacing after each
+Saravanamutto recommends cs=(0.25-0.50)b for the axial spacing after each
 cascade. G. Persico recommends to use an spacing of the same order of
-magnitude as the opening ss~o (personal conversation). This later approach
+magnitude as the opening cs~o (personal conversation). This latter approach
 has more physical meaning because it is related to the lenght scale of the
 trailing edge vortices and their dissipation
 
 The stagger angle was computed assuming circular arc blades
 It could also be computed according to the correlation propossed by Okappu
-stagger  = geometry_stagger(theta_in,theta_out,type);
 This approach did not work so well for me in the past
-
-Tip and shroud clearance is computed according to the recommendations of
-some papers by Lazzaretto et al. (2016)
 
 %}
 

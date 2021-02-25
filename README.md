@@ -3,7 +3,7 @@
 
 `AxialOpt` is a MATLAB tool for the mean-line design optimization of axial turbines.  The code was developed aiming at simplicity and ease of use. Some of the notable features of the code are listed below:
 
-- Supports the design optimization of axial turbines with any number of stages.
+- Supports the mean-line design optimization of axial turbines with any number of stages.
 - Supports several loss models to estimate the entropy generation within the turbine, including:
   - [Ainley and Mathieson](https://apps.dtic.mil/dtic/tr/fulltext/u2/a950664.pdf) (1951)
   - [Dunhan and Came](http://dx.doi.org/10.1115/1.3445349) (1970)
@@ -15,13 +15,14 @@
 - Offers plotting capabilities to visualize the geometry, thermodynamic diagrams, velocity triangles, and loss distribution of the designed turbines.
 - Offers the possibility to export publication-quality plots by means of the [export_fig](https://github.com/altmany/export_fig) toolbox. Using this toolbox requires [ghostcript](https://www.ghostscript.com/) and [pdftops](http://www.xpdfreader.com/). See the installation instructions in the original repository.
 
-_Note: AxialOpt is not suited to estimate the performance of an existing turbine design under different operating conditions._
-
 <figure>
 	<img src="./docs/axial_turbine_diagrams.svg" width="750"/> 
 </figure>
 
+_Note: AxialOpt is not suited to estimate the performance of an existing turbine design under different operating conditions._
+
 ## Installation
+
 In order to use `AxialOpt` you need a MATLAB installation and the MATLAB Optimization Toolbox. In addition you need to install CoolProp and interface it with MATLAB through Python. This may sound complicated, but it is not!
 
 Check the step-by-step instructions below to learn how to interface MATLAB with CoolProp in a Windows operating system. The installation for Linux or Mac operating systems would be similar.
@@ -72,11 +73,15 @@ If it does not throw and error and returns 373.1243 K, the installation was succ
 
 ## Getting started
 
-The best way to learn how to use `AxialOpt` is to open one of the [examples](examples/) and start playing around with the different parameters and settings. The examples have plenty of comments to guide the users and help them understand how the code works
+The best way to learn how to use `AxialOpt` is to open one of the [examples](examples/) and start playing around with the different parameters and settings. The examples have plenty of comments to guide the users and help them understand how the code works. You can use the example scripts as a template to start your own projects.
 
 ## Mathematical background
 
-Check out [our paper](https://doi.org/10.3390/ijtpp4030032) if you want to learn more about the optimization problem formulation and mathematical modeling behind `AxialOpt`.
+Check out our papers if you want to learn more about the optimization problem formulation and mathematical modeling behind `AxialOpt`:
+
+- R. Agromayor and L. O. Nord (2019). [Preliminary Design and Optimization of Axial Turbines Accounting for Diffuser Performance](https://doi.org/
+  10.3390/ijtpp4030032.). *International Journal of Turbomachinery, Propulsion and Power* 4.3, pp. 1-32.
+- R. Agromayor, B. Müller, and L. O. Nord (2019). [One-Dimensional Annular Diffuser Model for Preliminary Turbomachinery Design](https://doi.org/10.3390/ijtpp4030031.). *International Journal of Turbomachinery, Propulsion and Power* 4.3, pp. 1-31. 
 
 ## License
 
@@ -91,15 +96,7 @@ Check out [our paper](https://doi.org/10.3390/ijtpp4030032) if you want to learn
 You can use the following BibTeX entries if you want to cite `AxialOpt` in your work:
 
 ```bibtex
-@misc{axialopt_v2.0,
-    author = {},
-    title = {{AxialOpt v2.0}},
-    year = {2021},
-    doi = {https://doi.org/10.5281/zenodo.2635586},
-}
-```
-```bibtex
-@article{Agromayor2019,
+@article{Agromayor2019a,
     title = {{Preliminary Design and Optimization of Axial Turbines Accounting for Diffuser Performance}},
     author = {Agromayor, Roberto and Nord, Lars O},
     journal = {International Journal of Turbomachinery, Propulsion and Power},
@@ -111,4 +108,15 @@ You can use the following BibTeX entries if you want to cite `AxialOpt` in your 
 }
 ```
 
-
+```bibtex
+@article{Agromayor2019b,
+    title = {One-Dimensional Annular Diffuser Model for Preliminary Turbomachinery Design},
+    author = {Agromayor, Roberto and M{\"u}ller, Bernhard and Nord, Lars O},
+    journal = {International Journal of Turbomachinery, Propulsion and Power},
+    volume = {4},
+    number = {3},
+    pages = {1--31},
+    year = {2019},
+    doi = {https://doi.org/10.3390/ijtpp4030031}
+}
+```

@@ -115,7 +115,7 @@ kk = kk + 1;
 
 % Loss coefficient error
 for i = 1:length(Y_error)
-    name(kk)      = {'Loss coeff. error'};
+    name(kk)      = {'Loss coefficient error'};
     value(kk)     = {Y_error(i)};
     value_min(kk) = {0.00};
     value_max(kk) = {0.00};
@@ -182,6 +182,10 @@ for k = 1:length(constraint_names)
     
     if strcmp(constraint_name, 'chord')
         constraint_name = 'Blade chord';
+    end
+    
+    if strcmp(constraint_name, 'thickness_te')
+        constraint_name = 'Trailing edge thickness';
     end
     
     if strcmp(constraint_name, 'RPM')
